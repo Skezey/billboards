@@ -1,0 +1,55 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.19.0",
+    "cldr": "^5.4.1",
+    "devise-axios": "^1.0.24",
+    "globalize": "^1.4.2",
+    "moment": "^2.24.0",
+    "popper": "^1.0.1",
+    "react": "^16.10.2",
+    "react-audio-spectrum": "^0.1.0",
+    "react-big-calendar": "^0.22.1",
+    "react-calendar": "^2.19.2",
+    "react-dom": "^16.10.2",
+    "react-dropzone": "^10.1.10",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.2.0",
+    "react-sticky": "^6.0.3",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.88.1",
+    "styled-components": "^4.4.0"
+  },
+  "proxy": "http://localhost:3001",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^5.2.6",
+    "@storybook/addon-links": "^5.2.6",
+    "@storybook/addons": "^5.2.6",
+    "@storybook/react": "^5.2.6"
+  }
+}
