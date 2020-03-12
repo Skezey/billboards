@@ -1,25 +1,27 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import { AuthConsumer, } from "../../providers/AuthProvider";
-import Nomatch from './Nomatch';
+import { AuthConsumer } from "../../providers/AuthProvider";
+import Nomatch from "./Nomatch";
 
 const AdminRoute = ({ component: Component, ...rest }) => (
   <AuthConsumer>
-    { auth =>
+    {auth => (
       <Route
-        { ...rest }
-        render={ props => (
-          auth.authenticated ?
-            auth.user.role === 'admin' ?
-              <Component { ...props } />
-            :
+        {...rest}
+        render={props =>
+          auth.authenticated ? (
+            auth.user.role === "admin" ? (
+              <Component {...props} />
+            ) : (
               <Nomatch />
-          :
+            )
+          ) : (
             <Nomatch />
-          )}
+          )
+        }
       />
-    }
+    )}
   </AuthConsumer>
-)
+);
 
 export default AdminRoute;
